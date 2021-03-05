@@ -1,0 +1,24 @@
+
+<div class="col-md-6 offset-md-3">
+<h3>Add Loan Details</h3>
+<form (ngSubmit) = "onSubmit()">
+
+    <div class="form-group">
+        <label>Loan Type</label>
+        <input type="text" class="form-control" id="loanType" 
+           [(ngModel)] = "loandetails.loanType" name="loanType">
+    </div>
+    <div class="form-group">
+        <label>Duration</label>
+        <input type="text" class="form-control" id="duration" 
+           [(ngModel)] = "loandetails.duration" name="duration">
+    </div>
+    <div class="form-group">
+        <label>Interest Rate</label>
+        <input type="text" class="form-control" id="interestRate" 
+           [(ngModel)] = "loandetails.insterestRate" name="insterestRate">
+    </div>
+    <button class="btn btn-success" type="submit">Submit</button>
+
+</form>
+</div>

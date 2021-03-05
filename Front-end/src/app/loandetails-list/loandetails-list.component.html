@@ -1,0 +1,27 @@
+
+<button class="btn btn-info" style="margin-top:10px; background-color: chartreuse;color: black;" routerLink ="loandetails" routerLinkActive="active">Loan Details</button>
+<button class="btn btn-info" style="margin-top:10px; margin-left: 10px;background-color:  chartreuse;color: black" routerLink ="addloandetails" routerLinkActive="active">Add Loan Details</button>
+<h2 style="font-size:20px;">Loan Details</h2>
+<table class="table table-striped">
+    <thead>
+        <tr>
+            <th>Loan Type</th>
+            <th>Duration</th>
+            <th>Interest Rate</th>
+            <th>Action</th>
+        </tr>
+
+    </thead>
+    <tbody>
+        <tr *ngFor = "let loandetails of ldetails">
+            <td>{{loandetails. loanType}}</td>
+            <td>{{loandetails. duration}}</td>
+            <td>{{loandetails. insterestRate}}</td>
+            <td>
+                <button (click) = "updateLoanDetails(loandetails.loanDetailsId)" class="btn btn-info">Update</button>
+                <button (click) = "deleteLoanDetails(loandetails.loanDetailsId)" class="btn btn-danger" style="margin-left: 10px">Delete</button>
+            </td>
+            
+        </tr>
+    </tbody>
+</table>
